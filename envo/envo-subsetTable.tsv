@@ -173,7 +173,7 @@ glacial ice gain	envoPolar	A process during which the mass of ice constituting a
 brine channel formation process	envoPolar	A material accumulation process during which brine droplets, trapped between ice crystals formed during seawater freezing, form brine channels.	http://purl.obolibrary.org/obo/ENVO_03000042
 water ice sublimation process	envoPolar	A sublimation process during which water ice transitions into a gaseous state.	http://purl.obolibrary.org/obo/ENVO_01000920
 periglacial lake	envoPolar	A lake, part of whose margin is formed by an ice mass, ice cap or glacier, the ice having obstructed the natural drainage of the land.	http://purl.obolibrary.org/obo/ENVO_00000200
-obsolete plant-associated habitat	http://purl.obolibrary.org/obo/envo#EnvO-Lite-GSC	A habitat that is in or on a living plant. Here \\plant\\" denotes an individual of a species that is a sub-taxon of NCBITaxon:33090 (viridiplantae)."	http://purl.obolibrary.org/obo/ENVO_00009001
+obsolete plant-associated habitat	http://purl.obolibrary.org/obo/envo#EnvO-Lite-GSC	A habitat that is in or on a living plant. Here "plant" denotes an individual of a species that is a sub-taxon of NCBITaxon:33090 (viridiplantae)."	http://purl.obolibrary.org/obo/ENVO_00009001
 ice cap	envoPolar	A dome-shaped ice mass that covers less than 50,000 km2 of land area (usually covering a highland area).	http://purl.obolibrary.org/obo/ENVO_00000145
 soot	envoPolar	Particulate matter primarily composed of carbon particles formed through the incomplete combustion of hydrocarbons.	http://purl.obolibrary.org/obo/ENVO_03000021
 freshwater lake	envoPolar	A lake of whose water contains low concentrations of salts.	http://purl.obolibrary.org/obo/ENVO_00000021
@@ -514,7 +514,7 @@ solid-phase sintering	envoPolar	A compaction process during which a material ent
 iceberg	envoPolar	A large mass of detached land ice in the sea or stranded in shallow water.	http://purl.obolibrary.org/obo/ENVO_00000298
 permafrost	envoPolar	Soil at or below the freezing point of water (0C or 32F) for two or more years. Ice is not always present, as may be in the case of nonporous bedrock, but it frequently occurs and it may be in amounts exceeding the potential hydraulic saturation of the ground material.	http://purl.obolibrary.org/obo/ENVO_00000134
 slush ice layer	envoPolar	A layer which consists of slush ice.	http://purl.obolibrary.org/obo/ENVO_03000077
-obsolete animal-associated habitat	http://purl.obolibrary.org/obo/envo#EnvO-Lite-GSC	A habitat that is in or on a living animal. Here \\animal\\" denotes an individual of a species that is a sub-taxon of NCBITaxon:33208."	http://purl.obolibrary.org/obo/ENVO_00006776
+obsolete animal-associated habitat	http://purl.obolibrary.org/obo/envo#EnvO-Lite-GSC	A habitat that is in or on a living animal. Here "animal" denotes an individual of a species that is a sub-taxon of NCBITaxon:33208."	http://purl.obolibrary.org/obo/ENVO_00006776
 hanging valley	envoPolar	A tributary valley with the floor at a higher relief than the main channel into which it flows. They are most commonly associated with U-shaped valleys when a tributary glacier flows into a glacier of larger volume.	http://purl.obolibrary.org/obo/ENVO_00000184
 brackish water	envoPolar	Water which has a higher salinity than fresh water but a lower salinity than marine water.	http://purl.obolibrary.org/obo/ENVO_00002019
 underground water	envoPolar	Water which has physicochemical properties determined by processes which occur beneath the planetary crust.	http://purl.obolibrary.org/obo/ENVO_00005792
