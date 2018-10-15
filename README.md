@@ -2,6 +2,11 @@
 Ecobiomics hackathon
 
 
+https://public.etherpad-mozilla.org/p/AAFC_Training
+
+https://gts-ee.webex.com/gts-ee/j.php?MTID=md580aaab8c3883dbb9cf4802eae9bebe
+
+
 ## Data and use cases for the Ecobiomics hackathon on graph databases and Wikidata (Oct. 16 - 19).
 
 We’ll use this page to collect data and ideas that we may want to draw on at the hackathon. Feel free to comment on existing ideas, or to add your own. Our focus is on metagenomics, but we want to build general purpose biodiversity knowledge graph infrastructure, so any related datasets or use cases are welcome.
@@ -34,6 +39,86 @@ The first step would be to link (1) species-level taxon names (and information l
 
 ### iv. Integrated Flora of Canada
 AAFC is working on an Integrated Flora of Canada, based on our Semantic Mediawiki representation of Flora of North America. We want to build the new flora on Wikidata (instead of SMW), and we want to include sequence data, soil microbiome data, and more helpful habitat data. Can we take baby steps toward this in the hackathon?  
+
+http://dev.semanticfna.org/wiki/Chrysanthemoides
+
+```
+PREFIX up:<http://purl.uniprot.org/core/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+PREFIX wd: <http://www.wikidata.org/entity/>
+SELECT *
+WHERE
+{
+  # Find taxon in NCBI taxonomy called 
+  # Convert IRI to string
+  SERVICE <http://sparql.uniprot.org/sparql> 
+  {
+    ?taxon up:scientificName "Chrysanthemoides monilifera" .
+    BIND( REPLACE( STR(?taxon),"http://purl.uniprot.org/taxonomy/","" ) AS ?ncbi). 
+  }
+  
+  # Find Wikidata entity for same taxon using NCBI tax_id
+  SERVICE <https://query.wikidata.org/sparql> 
+  {
+    ?wikidata wdt:P685 ?ncbi .
+    ?wikidata wdt:P225 ?name .
+    
+    OPTIONAL {
+      ?wikidata wdt:P846 ?gbif .
+    }
+    
+    OPTIONAL {
+      ?wikidata wdt:P1727 ?florana .
+    }    
+  }	    
+    
+}
+```
+
+Find out whether rbcL has been sequenced for this species:
+
+```
+PREFIX up:<http://purl.uniprot.org/core/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+
+SELECT *
+WHERE
+{
+  # Find taxon in NCBI taxonomy called "Chrysanthemoides monilifera"
+  # Convert IRI to string
+  SERVICE <http://sparql.uniprot.org/sparql> 
+  {
+    ?taxon up:scientificName "Chrysanthemoides monilifera" .
+    BIND( REPLACE( STR(?taxon),"http://purl.uniprot.org/taxonomy/","" ) AS ?ncbi). 
+    
+    ?s ?p ?taxon .
+    ?s rdf:type <http://purl.uniprot.org/core/Protein> .
+    ?s up:encodedBy ?gene .
+    ?gene rdf:type up:Gene . 
+	?gene <http://www.w3.org/2004/02/skos/core#prefLabel> "rbcL" .
+    ?s rdfs:seeAlso ?nuc .
+    ?nuc rdf:type <http://purl.uniprot.org/core/Nucleotide_Resource> . 
+    ?nuc up:locatedOn ?embl . 
+    
+    OPTIONAL {
+      ?s up:citation ?citation .
+      ?citation up:title ?title .
+      ?citation <http://xmlns.com/foaf/0.1/primaryTopicOf> ?pubmed .
+    }
+      
+
+  }
+   
+    
+}
+```
+
+
+
 
 ### v. How can we incorporate the results of metagenomic analysis into the graph?
 
