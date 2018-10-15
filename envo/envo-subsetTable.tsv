@@ -173,7 +173,7 @@ glacial ice gain	envoPolar	A process during which the mass of ice constituting a
 brine channel formation process	envoPolar	A material accumulation process during which brine droplets, trapped between ice crystals formed during seawater freezing, form brine channels.	http://purl.obolibrary.org/obo/ENVO_03000042
 water ice sublimation process	envoPolar	A sublimation process during which water ice transitions into a gaseous state.	http://purl.obolibrary.org/obo/ENVO_01000920
 periglacial lake	envoPolar	A lake, part of whose margin is formed by an ice mass, ice cap or glacier, the ice having obstructed the natural drainage of the land.	http://purl.obolibrary.org/obo/ENVO_00000200
-obsolete plant-associated habitat	http://purl.obolibrary.org/obo/envo#EnvO-Lite-GSC	A habitat that is in or on a living plant. Here "plant" denotes an individual of a species that is a sub-taxon of NCBITaxon:33090 (viridiplantae)."	http://purl.obolibrary.org/obo/ENVO_00009001
+obsolete plant-associated habitat	http://purl.obolibrary.org/obo/envo#EnvO-Lite-GSC	A habitat that is in or on a living plant. Here "plant" denotes an individual of a species that is a sub-taxon of NCBITaxon:33090 (viridiplantae).	http://purl.obolibrary.org/obo/ENVO_00009001
 ice cap	envoPolar	A dome-shaped ice mass that covers less than 50,000 km2 of land area (usually covering a highland area).	http://purl.obolibrary.org/obo/ENVO_00000145
 soot	envoPolar	Particulate matter primarily composed of carbon particles formed through the incomplete combustion of hydrocarbons.	http://purl.obolibrary.org/obo/ENVO_03000021
 freshwater lake	envoPolar	A lake of whose water contains low concentrations of salts.	http://purl.obolibrary.org/obo/ENVO_00000021
