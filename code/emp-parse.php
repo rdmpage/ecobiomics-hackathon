@@ -22,7 +22,7 @@ while (!feof($file_handle) && !$done)
 		"\""
 		);
 		
-	print_r($row);		
+	//print_r($row);		
 
 	$go = is_array($row);
 			
@@ -35,7 +35,6 @@ while (!feof($file_handle) && !$done)
 		{
 			$header_lookup[$header[$i]] = $i;
 		}
-		
 		
 		$go = false;
 	}
@@ -57,7 +56,7 @@ while (!feof($file_handle) && !$done)
 
 	$row_count++;
 	
-	if ($row_count > 10) 
+	if ($row_count > 1000) 
 	{
 		$done = true;
 		exit();
